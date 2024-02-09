@@ -1,0 +1,2 @@
+Test file in git folder
+This is new line
