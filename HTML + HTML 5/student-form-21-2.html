@@ -12,6 +12,24 @@
       Email: <input type="email" />
       <br />
       Password: <input type="password" /> <br />Age: <input type="number" />
+      <br /><select name="" id="">
+        <option value="rjt">Rajkot</option>
+        <option value="">Ahmedabad</option>
+        <option value="" disabled>Surat</option>
+        <option value="" selected>Baroda</option>
+        <option value="">Mumbai</option>
+      </select>
+      <input
+        type="text"
+        placeholder="Enter your college name"
+        list="college-name"
+      />
+      <datalist id="college-name">
+        <option value="Atmiya">Atmiya University</option>
+        <option value="Darshan">Darshan University</option>
+        <option value="Saurastra">Saurastra University</option>
+        <option value="VVP">VVP College</option>
+      </datalist>
       <br />
       Gender:
       <label for="male">Male</label>
@@ -24,6 +42,14 @@
       <label for="Movie">Movie</label>
       <input type="checkbox" id="Movie" /> <label for="Gaming">Gaming</label>
       <input type="checkbox" id="Gaming" />
+      <br />
+      <textarea
+        name=""
+        id=""
+        cols="20"
+        rows="5"
+        placeholder="Enter your address"
+      ></textarea>
       <br />
       <input type="submit" />
       <input type="reset" />
