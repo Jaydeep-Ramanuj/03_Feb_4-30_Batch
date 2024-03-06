@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .profile-card {
+        /* height: 400px; */
+        /* width: 300px; */
+        width: 300px;
+        border-radius: 24px;
+        margin: 100px auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin-top: 10px;
+        /* outline: 3px solid white; */
+        outline: 3px solid white;
+        outline-offset: 3px;
+      }
+      .img-div {
+        /* height: 170px; */
+        padding: 10px;
+        background-color: #555cf6;
+        /* border-radius: 24px; */
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        text-align: center;
+      }
+      .content {
+        /* height: 230px; */
+        padding: 15px;
+        /* background-color: rgba(128, 128, 128, 0.583); */
+        /* border-radius: 24px; */
+
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        text-align: center;
+      }
+
+      .username {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .description {
+        margin-top: 10px;
+        color: #a1a1a1;
+      }
+      button {
+        margin-top: 20px;
+        border: none;
+        background-color: #5558fa;
+        padding: 5px 8px;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="img-div">
+        <img
+          src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="content">
+        <div class="username">David Dell</div>
+        <div class="description">
+          The lorem text the section contain contains header having open
+          andclose functionality.
+        </div>
+        <button>View More</button>
+      </div>
+    </div>
+  </body>
+</html>
