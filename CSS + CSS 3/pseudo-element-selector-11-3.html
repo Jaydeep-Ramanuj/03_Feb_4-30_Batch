@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+      }
+
+      li::before {
+        content: '\21D2';
+        margin-right: 10px;
+      }
+      li::after {
+        content: '\21D0';
+        margin-left: 10px;
+      }
+      input::placeholder {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>Fourth</li>
+      <li>Fifth</li>
+    </ul>
+
+    <input type="text" name="" id="" placeholder="Enter your name" />
+  </body>
+</html>
