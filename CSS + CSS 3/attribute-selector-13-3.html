@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input[type]{
+
+      } */
+      /* input[type] {
+        background-color: red;
+      } */
+      /* input[type='text'] {
+        background-color: red;
+      } */
+
+      div {
+        height: 25px;
+        border: 1px solid black;
+        /* background-color: aqua; */
+      }
+
+      /* div {
+        background-color: red;
+      } */
+      /* div[data-name] {
+        background-color: red;
+      } */
+      /* div[data-name='something'] {
+        background-color: red;
+      } */
+      /* div[data-name~='some'] {
+        background-color: red;
+      } */
+      /* div[data-name|='some'] {
+        background-color: red;
+      } */
+      /* div[data-name^='some'] {
+        background-color: red;
+      } */
+      /* div[data-name$='some'] {
+        background-color: red;
+      } */
+      div[data-name*='some'] {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-name="something">something</div>
+    <div data-name="some">some</div>
+    <div data-name="thing">thing</div>
+    <div data-name="some-thing">some-thing</div>
+    <div data-name="some thing">some thing</div>
+    <div data-name="some_thingsome">some_thing</div>
+    <div data-name="something-data">some_thing</div>
+    <div data-name="soing">soing</div>
+    <div data-name="someth">someth</div>
+    <div data-name="ething">ething</div>
+    <div data-name="">no data</div>
+    <div>none</div>
+    <!-- <p>not div</p> -->
+  </body>
+</html>
+
+<!-- [attribute], selects element with specifies attribute -->
+
+<!-- [attribute = "value"], selects element with specifies attribute with exactly specified value  -->
+
+<!-- [attribute ~ ="value"], selects element with specifies attribute with space separated specified value  -->
+
+<!-- [attribute | ="value"], selects element with specifies attribute with hyphen separated specified value  -->
+
+<!-- [attribute ^ ="value"], selects element with specifies attribute which starts with specified value>
+
+<!-- [attribute $ ="value"], selects element with specifies attribute which ends with specified value>
+
+<!-- [attribute * ="value"], selects element with specifies attribute which includes specified value>
