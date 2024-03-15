@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent > .some {
+        border: 1px solid red;
+        margin: 5px;
+      }
+
+      .box > .temp {
+        border: 1px solid red;
+        margin: 5px;
+      }
+
+      /* .this + .temp {
+        color: red;
+      } */
+      .this ~ .temp {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="parent">
+      <div class="child some">
+        child1
+        <div class="sub-child some">sub-child1</div>
+        <div class="sub-child some">sub-child2</div>
+        <div class="sub-child some">sub-child3</div>
+      </div>
+      <div class="child some">
+        child2
+        <div class="sub-child some">sub-child1</div>
+        <div class="sub-child some">sub-child2</div>
+        <div class="sub-child some">sub-child3</div>
+      </div>
+      <div class="child some">
+        child3
+        <div class="sub-child some">sub-child1</div>
+        <div class="sub-child some">sub-child2</div>
+        <div class="sub-child some">sub-child3</div>
+      </div>
+    </div> -->
+
+    <div class="box">
+      <div class="temp">
+        temp1
+        <div class="temp">temp1</div>
+        <div class="temp this">temp1</div>
+        <p>This is p</p>
+        <div class="temp">temp2</div>
+        <div class="temp">temp3</div>
+      </div>
+      <div class="temp">
+        temp2
+        <div class="temp">temp1</div>
+        <div class="temp">temp2</div>
+        <div class="temp">temp3</div>
+      </div>
+      <div class="temp">
+        temp3
+        <div class="temp">temp1</div>
+        <div class="temp">temp2</div>
+        <div class="temp">temp3</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- If two selector are with no space then, combinator selector -->
+
+<!-- If two selector are with space then, descendent selector, it selects all elements with given selector on any level -->
+<!-- If two selector are with >, child selector, it selects elements from 1st level only -->
+
+<!-- adjacent sibling selector (+), it selects element which is exactly next to that element -->
+<!-- general sibling selector (~), it selects element which is exactly next to that element -->
+
+<!-- universal (*) -->
+<!-- id (#) -->
+<!-- class (.) -->
+<!-- group(,) -->
+<!-- combinator (no-space) -->
+<!-- descendent(space) -->
+<!-- child(>) -->
+<!-- adjacent sibling(+) -->
+<!-- general sibling(~) -->
+<!-- pseudo class (:) -->
+<!-- pseudo element (::) -->
+<!-- attribute([],='',|=,~=,*=,^=,$=) -->
+<!-- nth:child() -->
