@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        background-color: #abd8f1;
+      }
+      .card {
+        width: 600px;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 50px auto;
+        background-color: #d8eefc;
+        display: flex;
+        gap: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: all 300ms;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        outline: 10px solid rgba(255, 255, 255, 0.501);
+        outline-offset: 3px;
+      }
+      .name {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .username {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .desc {
+        margin-top: 20px;
+      }
+      .stats {
+        margin-top: 20px;
+        display: flex;
+        justify-content: start;
+        gap: 30px;
+      }
+      .btns {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .follow-btn {
+        background-color: #242827;
+        border-radius: 5px;
+        color: whitesmoke;
+        padding: 8px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .view-btn {
+        padding: 8px 30px;
+        color: #242827;
+        border-radius: 5px;
+        border: 3px solid #242827;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card:hover {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="https://images.pexels.com/photos/3638045/pexels-photo-3638045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <div class="content">
+        <div class="name">Bradley Steve</div>
+        <div class="username">@bradsteve</div>
+        <div class="desc">
+          I'm a Front End Developen follow me to be the first who see my new
+          work
+        </div>
+        <div class="stats">
+          <div class="matric">
+            <div class="number">15K</div>
+            <div class="label">Views</div>
+          </div>
+          <div class="matric">
+            <div class="number">82</div>
+            <div class="label">Projects</div>
+          </div>
+          <div class="matric">
+            <div class="number">1.3M</div>
+            <div class="label">Followers</div>
+          </div>
+        </div>
+        <div class="btns">
+          <div class="follow-btn">Follow</div>
+          <div class="view-btn">View Profile</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
