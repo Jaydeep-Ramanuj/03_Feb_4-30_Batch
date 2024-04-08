@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        margin: 100px auto;
+        height: 100px;
+        width: 100px;
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 10px solid rgba(211, 211, 211, 0.469);
+        /* border-top: 10px solid blueviolet; */
+        /* border-image: linear-gradient(to right, red, rgba(0, 0, 0, 0)) 1 100%; */
+        border-image-source: linear-gradient(to left, #00c853, #b2ff59);
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        /* border-top: 10px solid linear-gradient(transparent, blueviolet); */
+
+        /* border-image: linear-gradient(transparent, blueviolet) 30; */
+        /* background-image: linear-gradient(transparent, blueviolet); */
+        border-radius: 50%;
+        /* animation-name: rotateLoader;
+        animation-duration: 900ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; */
+      }
+      .child-box {
+        height: 50px;
+        width: 50px;
+        /* background-color: yellowgreen; */
+        border: 10px solid rgba(211, 211, 211, 0.469);
+        border-top: 10px solid blueviolet;
+        border-radius: 50%;
+        animation-name: rotateLoader;
+        animation-duration: 2700ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes rotateLoader {
+        from {
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="child-box"></div>
+    </div>
+  </body>
+</html>
