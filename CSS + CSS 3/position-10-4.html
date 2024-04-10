@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+        margin: 100px 50px;
+        display: flex;
+        position: relative;
+      }
+      .child {
+        height: 50px;
+        width: 50px;
+        border: 1px solid red;
+        background-color: yellowgreen;
+      }
+
+      .child:nth-child(1) {
+        /* position: relative; */
+        /* top: 50px; */
+        /* bottom: 100px; */
+        /* left: -50px;
+        right: -100px; */
+
+        /* top: -50px; */
+        bottom: -50px;
+        left: -50px;
+      }
+
+      .child:nth-child(2) {
+        position: absolute;
+        left: 50px;
+        top: 120px;
+      }
+
+      .spacer {
+        height: 2000px;
+        background-color: turquoise;
+      }
+
+      .child:nth-child(5) {
+        position: sticky;
+        left: 500px;
+        top: 150px;
+        /* right: 500px; */
+      }
+
+      .child:nth-child(4) {
+        position: fixed;
+        top: 200px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+    <div class="spacer"></div>
+  </body>
+</html>
+
+<!-- positions -->
+
+<!-- static -->
+<!-- relative -->
+<!-- absolute -->
+<!-- fixed -->
+<!-- sticky -->
