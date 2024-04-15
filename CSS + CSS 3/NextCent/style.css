@@ -14,7 +14,8 @@
 
 header {
   display: flex;
-  padding: 20px 100px;
+  /* padding: 20px 100px; */
+  padding: 20px 20px;
   justify-content: space-between;
   align-items: center;
 }
@@ -26,6 +27,14 @@ nav {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+#toggle {
+  display: none;
+}
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  display: none;
 }
 
 nav a {
@@ -57,7 +66,7 @@ nav a {
 }
 
 main {
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 .title {
@@ -80,6 +89,7 @@ main {
   margin-top: 30px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
 .hero-section .btn {
@@ -87,7 +97,7 @@ main {
 }
 
 .hero-section img {
-  height: 300px;
+  /* height: 300px; */
 }
 
 .client-section {
@@ -101,6 +111,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .community-section {
@@ -121,6 +132,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .community-card .title {
@@ -147,6 +159,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* .unlock-section img,
@@ -218,6 +231,7 @@ main {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
+  flex-wrap: wrap;
 }
 
 .testimonials-section .content {
@@ -244,6 +258,7 @@ main {
   display: flex;
   gap: 15px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .customers-list span {
@@ -271,10 +286,14 @@ main {
   justify-content: space-around;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
+}
+.marketing-card {
+  position: relative;
 }
 
 .marketing-card-info {
-  /* width: 80%; */
+  width: 80%;
   padding: 10px;
   background-color: var(--bg-secondary-color);
   text-align: center;
@@ -283,6 +302,10 @@ main {
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  bottom: -50px;
+  left: 10%;
+  border-radius: 8px;
 }
 
 .read-more {
@@ -303,6 +326,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .demo-section .title {
@@ -323,6 +347,7 @@ footer {
   color: #fefefe;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-links-heading {
