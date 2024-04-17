@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      .card-wrapper {
+        padding: 5px;
+        width: fit-content;
+        margin: 50px auto;
+        /* border: 1px solid black; */
+      }
+      .card {
+        max-width: 300px;
+        border-radius: 12px;
+        position: relative;
+        transition: all 600ms;
+        /* transform-style: preserve-3d; */
+      }
+      .front-face,
+      .back-face {
+        width: 100%;
+        border-radius: inherit;
+        transition: all 300ms;
+      }
+      .front-face {
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+      .back-face {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+      }
+      .title {
+        font-size: 1.4em;
+        color: whitesmoke;
+      }
+      .sub-title {
+        font-size: 1.1em;
+        color: whitesmoke;
+      }
+      .desc {
+        color: whitesmoke;
+      }
+
+      .card-wrapper:hover .card {
+        transform: perspective(800px) rotateY(180deg);
+      }
+
+      .card-wrapper:hover .card .front-face {
+        filter: blur(1px) brightness(40%);
+      }
+      .card-wrapper:hover .card .back-face {
+        backface-visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="front-face">
+          <img
+            src="https://image.tmdb.org/t/p/original/lr3cYNDlJcpT1EWzFH42aSIvkab.jpg"
+            alt=""
+          />
+        </div>
+        <div class="back-face">
+          <div class="title">Dune: Part One (2021)</div>
+          <div class="sub-title">Denis Villeneuve</div>
+          <div class="desc">
+            A noble family becomes embroiled in a war for control over the
+            galaxy's most valuable asset while its heir becomes troubled by
+            visions of a dark future.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
