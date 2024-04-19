@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: fit-content;
+        padding: 10px;
+        margin: 50px auto;
+        border: 1px solid;
+      }
+      .box {
+        height: 500px;
+        width: 500px;
+
+        background-color: #1f1f1f;
+        clip-path: circle(12.4% at 0 0);
+        transition: all 300ms;
+      }
+      .wrapper:hover .box {
+        clip-path: circle(150% at 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
