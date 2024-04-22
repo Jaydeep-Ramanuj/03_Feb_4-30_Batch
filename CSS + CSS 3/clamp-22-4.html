@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 500px;
+        background-color: violet;
+        padding-top: 100px;
+      }
+      .child {
+        /* font-size: 65px; */
+        /* font-size: 6vw; */
+        /* font-size: clamp(1.5rem, 6vw, 4rem); */
+        /* min-width: 300px;
+        width: 50vw;
+        max-width: 600px; */
+        width: clamp(300px, 50vw, 600px);
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Jay</div>
+    </div>
+  </body>
+</html>

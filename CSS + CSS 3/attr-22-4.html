@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style-type: none;
+      }
+      li::before {
+        content: attr(data-type) '-';
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li data-type="thin-crust">Pizza</li>
+      <li data-type="Margarita">Pizza</li>
+      <li data-type="Double cheese">Pizza</li>
+    </ul>
+  </body>
+</html>
