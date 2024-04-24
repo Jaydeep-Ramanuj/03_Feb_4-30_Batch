@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        margin: 50px auto;
+        display: grid;
+        /* grid-template-columns: repeat(4, 100px); */
+        grid-template-areas:
+          'header header header header'
+          'main main main sidebar'
+          'main main main sidebar-2'
+          'main main main sidebar-3'
+          'footer footer footer footer';
+      }
+      .child {
+        height: 200px;
+        background-color: yellowgreen;
+      }
+      .child:nth-child(1) {
+        grid-area: header;
+        background-color: yellow;
+      }
+
+      .child:nth-child(2) {
+        grid-area: main;
+        background-color: violet;
+      }
+      .child:nth-child(3) {
+        grid-area: sidebar;
+        background-color: tomato;
+      }
+      .child:nth-child(4) {
+        grid-area: sidebar-2;
+        background-color: tomato;
+      }
+      .child:nth-child(5) {
+        grid-area: sidebar-3;
+        background-color: tomato;
+      }
+      .child:nth-child(6) {
+        grid-area: footer;
+        background-color: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">header</div>
+      <div class="child">main</div>
+      <div class="child">sidebar</div>
+      <div class="child">sidebar-2</div>
+      <div class="child">sidebar-3</div>
+      <div class="child">footer</div>
+    </div>
+  </body>
+</html>
