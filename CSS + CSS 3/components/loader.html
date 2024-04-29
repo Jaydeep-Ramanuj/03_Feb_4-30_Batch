@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #0e0e0e;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 3px solid white;
+        margin: 100px auto;
+        position: relative;
+        animation-name: rotateBox;
+        animation-duration: 3000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .dot {
+        height: 15px;
+        width: 15px;
+        background-color: #fb4300;
+        border-radius: 50%;
+        position: absolute;
+        left: 10px;
+      }
+
+      @keyframes rotateBox {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>

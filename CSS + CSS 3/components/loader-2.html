@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        background-color: #000000;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #71716e;
+        margin: 150px auto;
+        border: 1px solid grey;
+        position: relative;
+      }
+
+      .box::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        position: absolute;
+        /* border: 7px solid blue; */
+        /* border-image: linear-gradient(blue, pink); */
+        /* border-image-slice: 1; */
+
+        border-top: 7px solid #2835a4;
+        border-left: 7px solid #2835a4;
+
+        /* border-top: 7px solid #e15144;
+        border-left: 7px solid #d68635;
+        border-bottom: 7px solid #4795e1; */
+        animation-name: rotateBox;
+        animation-duration: 3000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes rotateBox {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Loading...</div>
+  </body>
+</html>

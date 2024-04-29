@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Document</title>
+    <!-- internal inside head tag -->
+    <script defer async>
+      console.log('This will be printed from head tag');
+    </script>
+    <script src="js-intro.js"></script>
+  </head>
+  <body>
+    <button onclick="console.log('This is printed from onclick event')">
+      click here
+    </button>
+
+    <!-- internal inside body tag-->
+    <script>
+      console.log('Namaste Javascript');
+      //   document.write('Namaste Javascript');
+    </script>
+  </body>
+</html>
