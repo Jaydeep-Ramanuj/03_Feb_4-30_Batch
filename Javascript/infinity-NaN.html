@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(1000 ** 1000); // infinity
+      console.log(10 / 0); // infinity
+
+      console.log(Infinity + Infinity); // infinity
+      console.log(Infinity + 10); // infinity
+      console.log(Infinity * Infinity); // infinity
+      console.log(Infinity * 10); // infinity
+      console.log(Infinity - 10); // infinity
+      console.log(Infinity / 10); // infinity
+      console.log(Infinity - Infinity); // NaN, Not a Number
+      console.log(Infinity / Infinity); // NaN, Not a Number
+
+      console.log(isNaN('10')); // false,because it can be converted to number
+      console.log(isNaN('10a')); // true,because it can't be converted to number
+    </script>
+  </body>
+</html>

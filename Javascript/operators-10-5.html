@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // operators, these are symbols that perform specific operations
+
+      //   syntax
+      //
+      //   binary operator
+      // operand operator operand
+      //
+      //   unary operator
+      //   operand operator
+
+      // ******************
+
+      //   assignment operator, assigns right side value to left side
+      a = 10;
+
+      //   comparison operator, it gives true if both values are same, otherwise false
+
+      b = 20;
+      c = 30;
+      d = '30';
+      //   console.log(10 == 20); //false
+      //   console.log(b == c);  //false
+      //   console.log(b == 30); //true
+      //   console.log(d == 30); //true
+      //   console.log(c == d); //true
+
+      //   strict comparison operator, it gives true if both values and data type are same otherwise false
+
+      //   console.log(c === d); //false
+
+      // ******************
+
+      // Arithmetic operator
+      e = 10;
+      f = 20;
+      g = 30;
+
+      console.log(e + f); // summation
+      console.log(e + 'a'); // concatenation
+
+      console.log(e - f); // subtraction
+      console.log(e * f); // multiplication
+      console.log(e / f); // division
+      console.log(e % f); // modulo, remainder
+      console.log(e ** 5); // power
+
+      console.log(100 ** 100); // exponential value
+
+      // ******************
+      //   comparison operator
+      h = 10;
+      i = 20;
+      j = '30';
+
+      console.log(10 < 20); // true
+      console.log(h < 20); // true
+      console.log(h < i); // true
+
+      console.log(h < 5); // false
+      console.log(10 < 10); //false
+
+      console.log(10 > 20); // true
+      console.log(10 > 5); // true
+      console.log(10 > 10); // false
+
+      console.log(10 <= 10); // true
+      console.log(10 <= 9); // false
+
+      console.log(10 >= 10); // true
+      console.log(10 >= 11); // false
+
+      console.log(10 != 20); // true
+
+      // ******************
+
+      //   AND Gate (&&) gives true if all are true, otherwise false
+      console.log(true && true); //true
+      console.log(true && true && true); // true
+      console.log(true && true && false); // false
+      console.log(false && false && false); // false
+
+      //   OR Gate (||) gives true if any is true, otherwise false
+      console.log(true || true); //true
+      console.log(true || true || true); // true
+      console.log(true || true || false); // true
+      console.log(false || false || false); // false
+
+      //   NOT Gate (!) gives true if false and gives false if true
+
+      console.log(!true); // false
+      console.log(!false); // true
+
+      console.log(true && false && true);
+
+      console.log(10 > 20 && 'true');
+
+      // ******************
+
+      // post increment / decrement
+
+      k = 40;
+      l = 30;
+      m = 50;
+      n = 60;
+
+      //   ++ increment
+      k++;
+      console.log(k);
+      //   -- decrement
+      l--;
+      console.log(l);
+
+      //   pre increment / decrement
+      ++m;
+      console.log(m);
+      --n;
+      console.log(n);
+
+      o = 70;
+      console.log(o++); // 70
+      console.log(++o); // 71
+
+      // ******************
+      // shorthand
+
+      //   p = p + 10; // longhand
+
+      p = 10;
+      p += 10; // shorthand
+      console.log(p);
+
+      p = 10;
+      p -= 10;
+      console.log(p);
+
+      p = 10;
+      p *= 10;
+      console.log(p);
+
+      p = 10;
+      p /= 10;
+      console.log(p);
+    </script>
+  </body>
+</html>
