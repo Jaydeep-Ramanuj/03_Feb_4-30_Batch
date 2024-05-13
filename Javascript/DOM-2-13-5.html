@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+      </div>
+    </div>
+
+    <script>
+      let parent = document.getElementsByClassName('parent')[0];
+      let child = document.getElementsByClassName('child')[0];
+      console.log(parent);
+      console.log(child);
+
+      // accessing innerHTML
+      //   console.log(parent.innerHTML);
+
+      //   changing innerHTML
+      //   parent.innerHTML = '<b>This is new content</b>';
+
+      //   accessing innerText
+
+      console.log(parent.innerText);
+      console.log(child.innerText);
+      //   changing innerText
+      //   parent.innerText = 'This is new text';
+    </script>
+  </body>
+</html>

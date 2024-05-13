@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="para">This is p tag</p>
+    <div id="some">This is div tag</div>
+    <div class="temp">Temp1</div>
+    <div class="temp">Temp2</div>
+
+    <b>This is first b tag</b>
+    <b>This is second b tag</b>
+    <b>This is third b tag</b>
+
+    <div class="parent">
+      <div class="child">Child1</div>
+      <div class="child">Child2</div>
+      <div class="child">Child3</div>
+    </div>
+    <script>
+      console.log(document);
+      console.dir(document);
+
+      //   getElementById
+      const paragraph = document.getElementById('para');
+      console.log(paragraph);
+
+      div = document.getElementById('some');
+      console.log(div);
+
+      //   getElementsByClassName
+      temp = document.getElementsByClassName('temp');
+      console.log(temp);
+
+      //   getElementsByTagName
+      b = document.getElementsByTagName('b');
+
+      console.log(b);
+      console.log(b[0]);
+
+      //   querySelector
+      child = document.querySelector('.parent .child');
+
+      console.log(child);
+
+      //   querySelectorAll
+      children = document.querySelectorAll('.parent .child');
+      console.log(children);
+      console.log(children[2]);
+    </script>
+  </body>
+</html>
