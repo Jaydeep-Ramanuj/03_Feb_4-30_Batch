@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        border-radius: 12px;
+        background-color: lightgray;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Jay</div>
+
+    <script>
+      let box = document.querySelector('.box');
+      let width = 200;
+      //   box.style.color = 'red';
+      // //   box.style.height = '100px';
+      // //   box.style.backgroundColor = 'lightgray';
+      // //   box.style.borderRadius = '12px';
+      // //   box.style.margin = '12px';
+      // //   box.style.padding = '12px';
+
+      box.style.cssText = `height: 300px;
+              width: ${width}px;
+              border-radius: 12px;
+              background-color: tomato;
+              margin: 10px;
+              padding: 10px;`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 10px;
+        width: 300px;
+        border-radius: 12px;
+        background-color: lightgray;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button>Click here</button>
+    <script>
+      let box = document.getElementsByClassName('box')[0];
+
+      let counter = 1;
+      let btn = document
+        .getElementsByTagName('button')[0]
+        .addEventListener('click', () => {
+          //   console.log(`${counter * 10}px`);
+          if (counter <= 5) {
+            box.style.height = `${counter * 100}px`;
+          }
+          counter++;
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>Above parent</b>
+    <div class="parent">
+      <div class="child">
+        child1
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child2
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child3
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+    </div>
+    <p>Below parent</p>
+    <script>
+      let parent = document.getElementsByClassName('parent')[0];
+
+      //   Accessing children elements
+      console.log(parent.children);
+      //   Accessing first child element
+      console.log(parent.firstElementChild);
+      //   Accessing last child element
+      console.log(parent.lastElementChild);
+      //   Accessing next sibling element
+      console.log(parent.nextElementSibling);
+      //   Accessing previous sibling element
+      console.log(parent.previousElementSibling);
+
+      console.log(parent.parentElement.parentElement.parentElement);
+
+      //   Accessing child element count using .length
+      console.log(parent.children.length);
+
+      //   Accessing child element count using built int method
+      console.log(parent.childElementCount);
+    </script>
+  </body>
+</html>
