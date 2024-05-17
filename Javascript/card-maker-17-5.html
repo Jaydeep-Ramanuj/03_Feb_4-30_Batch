@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .profile-card {
+        /* height: 400px; */
+        /* width: 300px; */
+        width: 300px;
+        border-radius: 24px;
+        margin: 100px auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin-top: 10px;
+        /* outline: 3px solid white; */
+        outline: 3px solid white;
+        outline-offset: 3px;
+      }
+      .img-div {
+        /* height: 170px; */
+        padding: 10px;
+        background-color: #555cf6;
+        /* border-radius: 24px; */
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        text-align: center;
+      }
+      .img-div:hover {
+        background-image: url(https://media1.tenor.com/m/pkqQze73yOoAAAAC/confetti-sticker.gif);
+      }
+
+      .content {
+        /* height: 230px; */
+        padding: 15px;
+        /* background-color: rgba(128, 128, 128, 0.583); */
+        /* border-radius: 24px; */
+
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        text-align: center;
+      }
+
+      .username {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .description {
+        margin-top: 10px;
+        color: #a1a1a1;
+      }
+      button {
+        margin-top: 20px;
+        border: none;
+        background-color: #5558fa;
+        padding: 5px 8px;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- <div class="profile-card">
+      <div class="img-div">
+        <img
+          src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="content">
+        <div class="username">David Dell</div>
+        <div class="description">
+          The lorem text the section contain contains header having open
+          andclose functionality.
+        </div>
+        <button>View More</button>
+      </div>
+    </div> -->
+    <script>
+      //   let cardEle = document.createElement('div');
+      //   let imgDivEle = document.createElement('div');
+      //   let contentEle = document.createElement('div');
+      //   let usernameEle = document.createElement('div');
+      //   let descEle = document.createElement('div');
+      //   let imgEle = document.createElement('img');
+      //   let btnEle = document.createElement('button');
+
+      //   cardEle.classList.add('profile-card');
+      //   imgDivEle.classList.add('img-div');
+      //   contentEle.classList.add('content');
+      //   usernameEle.classList.add('username');
+      //   descEle.classList.add('description');
+
+      //   imgEle.setAttribute(
+      //     'src',
+      //     'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+
+      //   usernameEle.innerText = 'Sushen shaw';
+      //   descEle.innerText =
+      //     'The lorem text the section contain contains header having open andclose functionality.';
+      //   btnEle.innerText = 'View more';
+
+      //   contentEle.append(usernameEle);
+      //   contentEle.append(descEle);
+      //   contentEle.append(btnEle);
+
+      //   //   console.log(contentEle);
+
+      //   imgDivEle.append(imgEle);
+      //   //   console.log(imgDivEle);
+
+      //   cardEle.append(imgDivEle);
+      //   cardEle.append(contentEle);
+      //   console.log(cardEle);
+
+      //   document.getElementById('root').append(cardEle);
+
+      //   ----------
+
+      let newCard = document.createElement('div');
+      newCard.classList.add('profile-card');
+
+      newCard.innerHTML = `<div class="img-div">
+        <img
+          src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="content">
+        <div class="username">David Dell</div>
+        <div class="description">
+          The lorem text the section contain contains header having open
+          andclose functionality.
+        </div>
+        <button>View More</button>
+      </div>`;
+
+      console.log(newCard);
+
+      document.getElementById('root').append(newCard);
+    </script>
+  </body>
+</html>

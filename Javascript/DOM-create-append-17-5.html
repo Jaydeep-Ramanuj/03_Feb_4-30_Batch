@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">This content is already present</div>
+
+    <script>
+      const box = document.getElementsByClassName('box')[0];
+
+      let newEle1 = document.createElement('div');
+      let newEle2 = document.createElement('div');
+      //   console.log(newEle);
+      newEle1.innerText = 'This is new element, which is prepended';
+      newEle2.innerText = 'This is new element, which is appended';
+      newEle1.classList.add('red');
+      newEle2.classList.add('red');
+
+      box.prepend(newEle1);
+      box.append(newEle2);
+    </script>
+  </body>
+</html>

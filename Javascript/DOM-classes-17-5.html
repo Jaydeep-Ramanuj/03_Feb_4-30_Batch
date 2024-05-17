@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box:nth-child(3) .some {
+        color: red;
+      }
+
+      .red {
+        background-color: rgba(255, 0, 0, 0.452);
+      }
+      .bold {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box">
+      Box1
+      <div class="some">Some 1</div>
+    </div>
+    <div class="box">Box1</div>
+    <div class="box">
+      Box3
+      <div class="some">Some 2</div>
+    </div>
+    <div class="box">Box4</div>
+    <div class="box">
+      Box5
+      <div class="some">Some3</div>
+    </div> -->
+
+    <div class="box some else">Box</div>
+    <button onclick="box.classList.toggle('bold');">Toggle class</button>
+    <script>
+      //   let boxEle = document.querySelector('.box:nth-child(3) .some');
+      //   console.log(boxEle);
+
+      // ----------
+
+      let box = document.getElementsByClassName('box')[0];
+      console.log(box);
+
+      //   Accessing element classes using className which gives list of classes as string
+      console.log(box.className);
+      //   classList which gives list of classes as list
+      console.log(box.classList);
+
+      box.classList.add('other', 'extra');
+      box.classList.add('red');
+      box.classList.remove('extra');
+
+      //   box.classList.toggle('bold');
+    </script>
+  </body>
+</html>
