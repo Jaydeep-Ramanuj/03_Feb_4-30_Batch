@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click here</button>
+    <input type="text" name="" id="name" placeholder="Enter your name" />
+    <script>
+      let btn = document.querySelector('button');
+      //   console.log(btn);
+
+      //   btn.addEventListener('click', function () {
+      //     console.log('Btn clicked');
+      //     btn.style.color = 'red';
+      //   });
+
+      //   btn.addEventListener('dblclick', function () {
+      //     console.log('Btn double clicked');
+      //     btn.style.color = 'blue';
+      //   });
+
+      //   btn.addEventListener('mouseover', function () {
+      //     console.log('Btn hovered');
+      //     btn.style.color = 'pink';
+      //   });
+
+      //   btn.addEventListener('focus', function () {
+      //     console.log('Btn focused');
+      //     btn.style.color = 'orange';
+      //   });
+      //   btn.addEventListener('mousedown', function () {
+      //     console.log('Btn mouse clicked');
+      //     btn.style.color = 'orange';
+      //   });
+
+      let name = document.querySelector('#name');
+
+      //   name.addEventListener('focus', function () {
+      //     console.log('Input focused');
+      //   });
+      //   name.addEventListener('change', function () {
+      //     console.log('Input focused');
+      //     console.log(name.value);
+      //   });
+      name.addEventListener('input', function (e) {
+        console.log(e);
+
+        console.log(name.value);
+      });
+
+      let isCtrlPressed = false;
+      let isShiftPressed = false;
+      document.addEventListener('keydown', function (event) {
+        // console.log(event);
+        // console.log(event.code);
+
+        event.code == 'ControlLeft' && (isCtrlPressed = true);
+
+        event.code == 'ShiftLeft' && (isShiftPressed = true);
+        if (isShiftPressed && isCtrlPressed) {
+          //   console.log('isCtrlPressed: ' + isCtrlPressed);
+          //   console.log('isShiftPressed: ' + isShiftPressed);
+          console.log('Shortcut pressed');
+
+          document.body.style.backgroundColor = '#24252e';
+        }
+      });
+
+      document.addEventListener('keyup', function (event) {
+        isCtrlPressed && (isCtrlPressed = false);
+        isShiftPressed && (isShiftPressed = false);
+      });
+
+      btn.onclick = function () {
+        console.log('Btn clicked');
+      };
+    </script>
+  </body>
+</html>

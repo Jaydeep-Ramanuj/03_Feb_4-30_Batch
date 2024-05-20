@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cards {
+        display: flex;
+        gap: 20px;
+        background-color: lightgray;
+        border-radius: 12px;
+        padding: 15px;
+      }
+      .card {
+        height: 200px;
+        width: 200px;
+        background-color: lightsalmon;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <div class="card card1"></div>
+      <div class="card card2"></div>
+      <div class="card card3"></div>
+      <div class="card card4"></div>
+      <div class="card card5"></div>
+    </div>
+
+    <script>
+      //   document.querySelector('.card1').addEventListener('click', () => {
+      //     console.log('Card 1 clicked');
+      //   });
+      //   document.querySelector('.card2').addEventListener('click', () => {
+      //     console.log('Card 2 clicked');
+      //   });
+      //   document.querySelector('.card3').addEventListener('click', () => {
+      //     console.log('Card 3 clicked');
+      //   });
+      //   document.querySelector('.card4').addEventListener('click', () => {
+      //     console.log('Card 4 clicked');
+      //   });
+      //   document.querySelector('.card5').addEventListener('click', () => {
+      //     console.log('Card 5 clicked');
+      //   });
+
+      document.querySelector('.cards').addEventListener('click', (event) => {
+        console.log(event);
+
+        event.target.style.backgroundColor = 'maroon';
+
+        let cards = document.querySelectorAll('.card');
+
+        Array.from(cards).forEach((card) => {
+          if (card != event.target) {
+            card.style.backgroundColor = 'lightsalmon';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
