@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+        background-repeat: round;
+      }
+      .focus {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: rgba(211, 211, 211, 0.267);
+        position: absolute;
+        /* background-size: cover; */
+        /* background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+        /* object-fit: cover; */
+      }
+    </style>
+  </head>
+  <!-- background="https://images.pexels.com/photos/462331/pexels-photo-462331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" -->
+  <body>
+    <div class="focus"></div>
+    <script>
+      let focusEle = document.querySelector('.focus');
+      console.dir(focusEle);
+      let bodyImgSrc = document.body.getAttribute('background');
+      //   focusEle.style.backgroundImage = `url("${bodyImgSrc}")`;
+      console.log(`url("${bodyImgSrc}")`);
+
+      document.addEventListener('keydown', function (event) {
+        if (event.ctrlKey == true && event.shiftKey == true) {
+          document.body.style.cssText = `  background-color: #24252e;
+        height: 100vh;
+        position: relative;
+        cursor: crosshair;`;
+          document.addEventListener('mousemove', function (event) {
+            let xVal = event.pageX;
+            let yVal = event.pageY;
+            console.log(xVal);
+
+            focusEle.style.top = yVal - 50 + 'px';
+            focusEle.style.left = xVal - 50 + 'px';
+
+            // focusEle.style.backgroundPosition = `${yVal - 50}px ${xVal - 50}px`;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

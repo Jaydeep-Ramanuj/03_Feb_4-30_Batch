@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+      }
+      .focus {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: rgba(211, 211, 211, 0.267);
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="focus"></div>
+    <script>
+      let focusEle = document.querySelector('.focus');
+      console.dir(focusEle);
+
+      document.addEventListener('keydown', function (event) {
+        if (event.ctrlKey == true && event.shiftKey == true) {
+          document.body.style.cssText = `  background-color: #24252e;
+        height: 100vh;
+        position: relative;
+        cursor: crosshair;`;
+          document.addEventListener('mousemove', function (event) {
+            let xVal = event.pageX;
+            let yVal = event.pageY;
+            console.log(xVal);
+
+            focusEle.style.top = yVal - 50 + 'px';
+            focusEle.style.left = xVal - 50 + 'px';
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
