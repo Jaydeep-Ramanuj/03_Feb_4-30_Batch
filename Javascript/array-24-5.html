@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function foo() {
+        return 'Hey You get this data from foo()';
+      }
+      let name = 'jay';
+      let age = 20;
+      let a = [10, 20, 30, 40];
+      let arr = [10, '10', a, [100, 200], { username: 'jay' }, foo];
+
+      //   console.log(name);
+      //   console.log(age);
+
+      //   console.log(a[2]);
+      console.log(arr);
+      console.log(arr[0]);
+      arr[0] = 20;
+      console.log(arr);
+      console.log(arr[2][3]);
+      console.log(arr[3][1]);
+      console.log(arr[4].username);
+      console.log(arr[5]());
+    </script>
+  </body>
+</html>

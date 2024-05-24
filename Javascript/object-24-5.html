@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      user = [123, 'Jay', 24, 9638527410, 'Rajkot', 8.7];
+
+      console.log(user);
+      //   console.log(user[0]);
+
+      function sing() {
+        return 'Hey im singing';
+      }
+
+      userData = {
+        id: 123,
+        name: 'Jay',
+        age: 24,
+        number: 9638527410,
+        city: 'Rajkot',
+        cgpa: 8.7,
+        friendList: ['Sanajay', 'Ajay', 'Vijay'],
+        petInfo: {
+          name: 'Simba',
+          age: 3,
+          breed: 'pug',
+          friend: 'Mufasa',
+        },
+        sing: sing,
+      };
+
+      console.log(userData.name);
+      console.log(userData['name']);
+
+      console.log(userData.number);
+      console.log(userData.friendList[2]);
+      console.log(userData.friendList[2]);
+      console.log(userData.petInfo.friend);
+      console.log(userData.sing);
+    </script>
+  </body>
+</html>
