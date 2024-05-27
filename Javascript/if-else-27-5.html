@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(10 != 20);
+      a = 110;
+      b = 20;
+      if (a < b) {
+        console.log('Yess');
+      } else {
+        console.log('NOOO');
+      }
+      console.log('Hey');
+
+      //   syntax
+      //   if (condition) {
+      //     // code to execute if condition is true
+      //   }
+
+      //syntax
+      //   if (condition) {
+      //     // code to execute if condition is true
+      //   } else {
+      //     // code to execute if condition is false
+      //   }
+
+      age = 17;
+      if (age >= 18) {
+        console.log('You are eligible for voter Id card');
+        if (age > 85) {
+          console.log('You can avail special voting right');
+        }
+      } else {
+        console.log('You are NOT eligible for voter Id card');
+        if (age >= 16) {
+          console.log('You can register for future voter Id card');
+        }
+      }
+
+      let age_ = 18;
+      if (age_ >= 18) {
+        console.log('You are eligible for license');
+      } else {
+        console.log('You are NOT eligible for license');
+      }
+
+      a = 1;
+      b = 2;
+      c = 333;
+
+      //   if (a > b) {
+      //     if (a > c) {
+      //       console.log('a is max');
+      //     }
+      //   } else {
+      //     if (b > c) {
+      //       console.log('B is max');
+      //     } else {
+      //       console.log('C is max');
+      //     }
+      //   }
+
+      //   a > b
+      //     ? a > c
+      //       ? console.log('A is Max')
+      //       : console.log('')
+      //     : b > c
+      //     ? console.log('B is max')
+      //     : console.log('C is Max');
+
+      //   ---------------------
+
+      if (a > b) {
+        if (a > c) {
+          console.log('C is max');
+        } else if (c > b) {
+          console.log('C is max');
+        }
+      } else {
+        if (b > c) {
+          console.log('B is max');
+        }
+      }
+    </script>
+  </body>
+</html>

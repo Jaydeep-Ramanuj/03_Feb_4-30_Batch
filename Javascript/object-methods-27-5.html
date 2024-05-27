@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+      let divs = document.getElementsByTagName('div');
+
+      console.log(divs);
+
+      arr = [10, 20, 30];
+
+      //   divs.slice(0, 1);
+
+      let divsArray = Array.from(divs);
+      console.log(Array.from('India'));
+
+      console.log(divsArray.slice(0, 2));
+
+      function sing() {
+        return 'Hey im singing';
+      }
+      userData = {
+        id: 123,
+        name: 'Jay',
+        age: 24,
+        number: 9638527410,
+        city: 'Rajkot',
+        cgpa: 8.7,
+        friendList: ['Sanajay', 'Ajay', 'Vijay'],
+        petInfo: {
+          name: 'Simba',
+          age: 3,
+          breed: 'pug',
+          friend: 'Mufasa',
+        },
+        sing: sing,
+      };
+
+      //   console.log(arr);
+
+      //   console.dir(Array);
+      //   console.dir(Object);
+
+      console.log(Object.keys(userData));
+      console.log(Object.values(userData));
+      console.log(Object.entries(userData));
+    </script>
+  </body>
+</html>
