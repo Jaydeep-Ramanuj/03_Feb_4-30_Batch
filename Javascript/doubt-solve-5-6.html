@@ -112,6 +112,28 @@
       };
 
       console.log(num.sumOfArray());
+
+      str = '';
+
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+          if (j == 1 || j == 3) {
+            str += i + ' ';
+          }
+          if (j == 2) {
+            str += '1' + ' ';
+          }
+          if (j == 3) {
+            str += i * i + ' ';
+          }
+          if (j == 5) {
+            str += i * i * i + ' ';
+          }
+        }
+        str += '\n';
+      }
+
+      console.log(str);
     </script>
   </body>
 </html>
