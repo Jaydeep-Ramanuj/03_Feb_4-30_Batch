@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      num = 9876;
+      //   console.log(num);
+      //   num = num + '';
+      //   //   console.log(num.split(''));
+      //   numArray = num.split('');
+      //   //   numArray = Array.from(num);
+      //   //   console.log(numArray);
+      //   numArrayReverse = numArray.reverse();
+      //   //   console.log(numArrayReverse);
+
+      //   numberFromReversedArrayAsString = numArrayReverse.join('');
+      //   //   console.log(numberFromReversedArrayAsString);
+
+      //   reversedNumber = Number(numberFromReversedArrayAsString);
+      //   console.log(reversedNumber);
+
+      //   n = 93632;
+      //   console.log(Number((n + '').split('').reverse().join('')));
+
+      //   ----------------
+      //   reversedNum = 0;
+      //   for (let i = num; i != 0; i = i / 10) {
+      //     lastNum = num % 10;
+      //     console.log(lastNum);
+      //   }
+
+      //   lastNum = num % 10;
+
+      // while (num > 0) {
+      //   lastDigit = num % 10;
+      //   reversedNum = reversedNum * 10 + lastDigit;
+      //   num /= 10;
+      // }
+
+      //   console.log(reversedNum);
+
+      function getMonthDaysCount(month) {
+        switch (month + 1) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+            return 31;
+          case 2:
+            return 28;
+          case 4:
+          case 6:
+          case 9:
+          case 11:
+            return 30;
+        }
+      }
+
+      function getDaysTillChristmas() {
+        const date = new Date();
+
+        let daysLeftIncurrentMonth =
+          getMonthDaysCount(date.getMonth()) - date.getDate();
+        //   console.log(daysLeftIncurrentMonth);
+
+        let currentMonth = new Date().getMonth();
+
+        //   console.log(getMonthDaysCount(currentMonth));
+
+        let monthsLeftTillDecember = 11 - date.getMonth();
+        //   console.log(monthsLeftTillDecember);
+
+        let daysLeftTillDecemberAfterCurrentMonth = 0;
+
+        for (let i = date.getMonth() + 1; i < 11; i++) {
+          // console.log(i);
+          daysLeftTillDecemberAfterCurrentMonth += getMonthDaysCount(i);
+        }
+        //   console.log(daysLeftTillDecemberAfterCurrentMonth);
+
+        daysLeftTillNextChristmas =
+          daysLeftIncurrentMonth + daysLeftTillDecemberAfterCurrentMonth + 25;
+
+        // console.log(daysLeftTillNextChristmas);
+        return daysLeftTillNextChristmas;
+      }
+
+      //   console.log(getDaysTillChristmas());
+
+      console.getChristmasDays = getDaysTillChristmas;
+
+      console.log(console.getChristmasDays());
+
+      num = [10, 20, 30, 40, 50, 60];
+
+      number = [11, 22, 33];
+      console.log(number);
+
+      function sumOfArray(arr) {}
+
+      //   sumOfArray(num);
+
+      Array.prototype.sumOfArray = function () {
+        return this.reduce((result, num) => (result += num));
+      };
+
+      console.log(num.sumOfArray());
+    </script>
+  </body>
+</html>

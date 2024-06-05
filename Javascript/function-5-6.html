@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+
+      //   for (let i = 0; i < 5; i++) {
+      //     console.log(i);
+      //   }
+      //   console.log('1');
+      //   console.log('2');
+      //   console.log('3');
+      //   console.log('4');
+      //   console.log('5');
+
+      //
+      //
+      //
+      //
+      //
+
+      // syntax
+      //   function function_name() {
+      //     // code to be executed
+      //   }
+
+      function print0To5(len) {
+        let result = 0;
+        for (let i = 0; i <= len; i++) {
+          result += i;
+        }
+        return result;
+      }
+
+      //   print0To5('10');
+      //
+      //
+      //
+      //
+      //
+      //
+      //
+      console.log('-----------');
+
+      console.log(print0To5(10));
+
+      function getWeekDay(day) {
+        let weekDay = '';
+        switch (day - 1) {
+          case 0:
+            weekDay = 'Sunday';
+            break;
+          case 1:
+            weekDay = 'Monday';
+            break;
+          case 2:
+            weekDay = 'Tuesday';
+            break;
+          case 3:
+            weekDay = 'Wednesday';
+            break;
+          case 4:
+            weekDay = 'Thursday';
+            break;
+          case 5:
+            weekDay = 'Friday';
+            break;
+          case 6:
+            weekDay = 'Saturday';
+            break;
+          default:
+            weekDay = 'Wrong value';
+            break;
+        }
+        return weekDay;
+      }
+
+      //   console.log(getWeekDay(7));
+
+      console.log('Today is ' + getWeekDay(7));
+    </script>
+  </body>
+</html>
