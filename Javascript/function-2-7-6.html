@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function declaration
+      function sum(num1, num2) {
+        return num1 + num2;
+      }
+
+      let result = sum(10, 20);
+      console.log(result);
+
+      let subtraction;
+      console.log(typeof subtraction);
+
+      //   subtraction = function (num1, num2) {
+      //     return num1 - num2;
+      //   };
+
+      //   function expression
+      subtraction = (num1, num2) => {
+        return num1 - num2;
+      };
+      console.log(typeof subtraction);
+
+      console.log(subtraction(10, 20));
+
+      //   -----------
+
+      //   square = (num) => {
+      //     return num * num;
+      //   };
+
+      square = (num) => num * num;
+
+      console.log(square(10));
+    </script>
+  </body>
+</html>

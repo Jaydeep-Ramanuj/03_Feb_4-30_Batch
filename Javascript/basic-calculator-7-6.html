@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div action="">
+      <input type="text" name="" id="inp1" placeholder="Enter first number" />
+      <input type="text" name="" id="inp2" 
+      placeholder="Enter first number"/>
+      <div id="output" /></div>
+      <button id="btn">Submit</button>
+    </form>
+
+    <script>
+      const inp1 = document.getElementById('inp1');
+      const inp2 = document.getElementById('inp2');
+      const btn = document.getElementById('btn');
+      const output = document.getElementById('output');
+
+      sum=(num1,num2)=>num1+num2;
+
+      btn.addEventListener('click',(event)=>{
+        event.preventDefault();
+        output.textContent=sum(Number(inp1.value) ,Number(inp2.value) )
+      })
+    //   sub=(num1,num2)=>num1-num2;
+    //   mul=(num1,num2)=>num1*num2;
+    //   div=(num1,num2)=>num1/num2;
+    //   modulo=(num1,num2)=>num1%num2;
+    </script>
+  </body>
+</html>
