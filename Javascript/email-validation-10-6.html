@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" novalidate>
+      <input type="email" name="" id="email" />
+      <button onclick="return false">Submit</button>
+    </form>
+
+    <script>
+      const inp = document.querySelector('#email');
+      const btn = document.querySelector('button');
+
+      btn.addEventListener('click', () => {
+        let emailVal = inp.value;
+        let isEmailValid = validateEmail(emailVal);
+        console.log(isEmailValid);
+      });
+
+      function validateEmail(emailVal) {
+        let isEmpty = false;
+        let hasWhiteSpace = false;
+        let emailHasAt = false;
+        let emailHasDot = false;
+        let emailHasAtAndDotTogether = false;
+        let isCharactersPresentBeforeAt = false;
+        let isCharactersPresentAfterDot = false;
+
+        emailVal.length == 0 && (isEmpty = true);
+        emailVal.includes(' ') && (hasWhiteSpace = true);
+        emailVal.includes('@') && (emailHasAt = true);
+        emailVal.includes('.') && (emailHasDot = true);
+        emailVal.includes('@.') && (emailHasAtAndDotTogether = true);
+
+        emailVal.indexOf('@') <= 0 && (isCharactersPresentBeforeAt = true);
+
+        emailVal[emailVal.indexOf('.') + 1] == undefined &&
+          (isCharactersPresentAfterDot = true);
+
+        // console.log('isEmpty', !isEmpty);
+        // console.log('hasWhiteSpace', !hasWhiteSpace);
+        // console.log('isEmailHasAt', emailHasAt);
+        // console.log('isEmailHasDot', emailHasDot);
+        // console.log('isEmailHasAtAndDotTogether', !emailHasAtAndDotTogether);
+        // console.log(
+        //   'isCharactersPresentBeforeAt',
+        //   !isCharactersPresentBeforeAt
+        // );
+        // console.log(
+        //   'isCharactersPresentAfterDot',
+        //   !isCharactersPresentAfterDot
+        // );
+
+        // console.log(
+        //   !isEmpty &&
+        //     !hasWhiteSpace &&
+        //     emailHasAt &&
+        //     emailHasDot &&
+        //     !emailHasAtAndDotTogether &&
+        //     !isCharactersPresentBeforeAt &&
+        //     !isCharactersPresentAfterDot
+        // );
+        return (
+          !isEmpty &&
+          !hasWhiteSpace &&
+          emailHasAt &&
+          emailHasDot &&
+          !emailHasAtAndDotTogether &&
+          !isCharactersPresentBeforeAt &&
+          !isCharactersPresentAfterDot
+        );
+
+        // ---------------
+
+        // for (let i = 0; i < emailVal.length; i++) {
+        //   if (emailVal[i] == '@') {
+        //     isEmailHasAt = true;
+        //     break;
+        //   }
+        // }
+
+        // console.log(isEmailHasAt);
+
+        // let indexOfAt = emailVal.indexOf('@');
+        // console.log(indexOfAt);
+        // let charactersBeforeAt = emailVal.slice(0, indexOfAt);
+        // console.log(charactersBeforeAt);
+        // let lengthOfCharactersBeforeAt = charactersBeforeAt.length;
+        // console.log(lengthOfCharactersBeforeAt);
+      }
+    </script>
+  </body>
+</html>
