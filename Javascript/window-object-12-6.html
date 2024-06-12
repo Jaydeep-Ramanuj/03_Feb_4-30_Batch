@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    This is content
+    <script>
+      //   console.log(document);
+      //   console.dir(document);
+      //   window.alert('hey');
+      console.log(window);
+
+      //   setTimeout(() => {
+      //     window.close();
+      //   }, 3000);
+
+      function startBlinking() {
+        let isDarkMode = false;
+        let blink = setInterval(() => {
+          if (isDarkMode) {
+            document.body.style.backgroundColor = '#24252e';
+          } else {
+            document.body.style.backgroundColor = 'lightgray';
+          }
+          isDarkMode = !isDarkMode;
+        }, 100);
+        setTimeout(() => {
+          clearInterval(blink);
+        }, 15000);
+      }
+
+      function getData() {
+        window
+          .fetch('https://randomuser.me/api/?results=50')
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data.results);
+          });
+      }
+
+      window.find('This');
+      //   getData();
+
+      window.localStorage.setItem('name', 'Jay');
+
+      //   window.open('https://sass-lang.com/', 'width:300px', 'height:200px');
+
+      //   window.print();
+
+      window.resizeTo(300, 600);
+
+      window.PasswordCredential();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Navigator Object</h1>
+    <button id="stop">Stop Spying</button>
+    <script>
+      console.log(navigator);
+
+      function getClipBoardText() {
+        window.navigator.clipboard.readText().then((data) => {
+          console.log(data);
+        });
+      }
+
+      // getClipBoardText();
+
+      let locationData = [];
+
+      // function getCurrentLocation() {
+      //   location = setInterval(() => {
+      //     window.navigator.geolocation
+      //       .getCurrentPosition((data, err) => {
+      //         locationData.push({
+      //           latitude: data.coords.latitude,
+      //           longitude: data.coords.longitude,
+      //           accuracy: data.coords.accuracy,
+      //           time: new Date().getTime(),
+      //         });
+      //       })
+      //       .catch((err) => {
+      //         console.log(err);
+      //       });
+      //   }, 1000);
+
+      //   setTimeout(() => {
+      //     clearInterval(location);
+      //     console.log(locationData);
+      //   }, 10000);
+      // }
+
+      // getCurrentLocation();
+
+      //   console.log(window);
+
+      // window.location();
+
+      let userDynamicLocation = [];
+
+      let getLocation = setInterval(() => {
+        window.navigator.geolocation.getCurrentPosition((position) => {
+          //   console.log(position);
+          userDynamicLocation.push({
+            lat: position.coords.latitude,
+            long: position.coords.longitude,
+            time: position.timestamp,
+          });
+        });
+      }, 500);
+
+      document.getElementById('stop').addEventListener('click', () => {
+        clearInterval(getLocation);
+        console.log(userDynamicLocation);
+      });
+    </script>
+  </body>
+</html>
