@@ -6,9 +6,16 @@
     <title>Document</title>
   </head>
   <body>
+    <a href="history-object-14-6.html">Go to history page</a>
+    <button>Go Forward</button>
     <h1>Navigator Object</h1>
     <button id="stop">Stop Spying</button>
     <script>
+      document
+        .getElementsByTagName('button')[0]
+        .addEventListener('click', () => {
+          window.history.forward();
+        });
       console.log(navigator);
 
       function getClipBoardText() {

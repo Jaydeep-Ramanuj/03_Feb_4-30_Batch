@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      person = {
+        name: 'jay',
+        age: 32,
+        phone: 9338527410,
+      };
+
+      function setCookie(key, value) {
+        document.cookie = `${key}=${JSON.stringify(value)}`;
+      }
+      function getCookie(key) {
+        console.log('data', document.cookie);
+        index = document.cookie.indexOf(key) + key.length + 1;
+        myCookie = JSON.parse(
+          document.cookie.slice(index, document.cookie.length)
+        );
+
+        return myCookie;
+      }
+
+      console.log(getCookie('temp'));
+
+      setCookie('temp', { name: 'some', age: 36 });
+      console.log(JSON.stringify(person));
+      console.log(JSON.parse(JSON.stringify(person)));
+
+      console.log(document.cookie);
+      document.cookie = 'name=jay';
+      document.cookie = `person=${JSON.stringify(person)}`;
+
+      window.localStorage.setItem('name', 'Sahil');
+      console.log(window.localStorage.getItem('name'));
+    </script>
+  </body>
+</html>

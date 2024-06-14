@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      obj1 = {
+        name: 'jay',
+        age: 30,
+        funcObj1: () => {
+          console.log('Obj1');
+        },
+      };
+
+      obj2 = {
+        name: 'Vijay',
+        age: 40,
+        funcObj2: () => {
+          console.log('Obj2');
+        },
+      };
+      obj2.__proto__ = obj1;
+
+      console.log(obj2.funcObj1);
+      console.log(obj2);
+
+      console.dir(document);
+
+      console.dir(Document);
+
+      ele = {
+        myele: function (elementName, text, className, css) {
+          const newEle = document.createElement(elementName);
+          newEle.innerText = text;
+          newEle.classList.add(className);
+          newEle.style.cssText = css;
+          return newEle;
+        },
+      };
+
+      ele.__proto__ = document;
+
+      console.log(ele);
+
+      //   $('#some');
+
+      //   <>
+      //   <div>
+      //     <p></p>
+      //     </div>
+      //     <>
+    </script>
+  </body>
+</html>
