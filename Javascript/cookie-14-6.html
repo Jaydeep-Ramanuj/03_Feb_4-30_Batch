@@ -18,7 +18,11 @@
       }
       function getCookie(key) {
         console.log('data', document.cookie);
-        index = document.cookie.indexOf(key) + key.length + 1;
+        // index = document.cookie.indexOf(key) + key.length + 1;
+        index = document.cookie.indexOf(key);
+        console.log(index);
+        console.log(document.cookie.length);
+
         myCookie = JSON.parse(
           document.cookie.slice(index, document.cookie.length)
         );
@@ -26,11 +30,11 @@
         return myCookie;
       }
 
-      console.log(getCookie('temp'));
-
       setCookie('temp', { name: 'some', age: 36 });
       console.log(JSON.stringify(person));
       console.log(JSON.parse(JSON.stringify(person)));
+
+      console.log(getCookie('temp'));
 
       console.log(document.cookie);
       document.cookie = 'name=jay';

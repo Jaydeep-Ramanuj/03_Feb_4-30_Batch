@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   console.log(document.cookie);
+
+      //   document.cookie = 'name=sahil2';
+
+      //   let cc = document.cookie;
+      //   //   document.cookie = 'name3=deep';
+
+      //   console.log(cc);
+
+      //   indexOfKey = cc.indexOf('name3') + 5 + 1;
+      //   console.log(indexOfKey);
+
+      //   //
+      //   console.log(cc.slice(indexOfKey, cc.indexOf(';', indexOfKey)));
+
+      //   str = 'this; is; some; str';
+      //   console.log(str.indexOf(';', str.indexOf('some') + 4));
+
+      function setCookie(key, value) {
+        document.cookie = `${key}=${JSON.stringify(value)}`;
+      }
+
+      function getCookie(key) {
+        let cookie = document.cookie;
+
+        // we want to access value of cookie based on provided key, for that we need to first find where is key located in cookie
+        indexOfKey = cookie.indexOf(key);
+
+        // Once we got index of key we need to add key length into it because we want to get string after it, plus we also want to skip = for temp
+
+        index = indexOfKey + key.length + 1;
+
+        // now we need to find where is ; after our key
+
+        indexOfSemiColon = cookie.indexOf(';', index);
+
+        // now we just need to slice the string based on key index and ; index
+
+        let result = cookie.slice(index, indexOfSemiColon);
+        console.log('result', result);
+
+        result = JSON.parse(result);
+        return JSON.parse(result);
+      }
+
+      person = {
+        name: 'jay',
+        age: '23',
+        gender: 'male',
+        phone: 9638527410,
+        email: 'jay@gmail.com',
+      };
+
+      myData = JSON.stringify(person);
+      setCookie('person', myData);
+      setCookie('person2', 'something random');
+
+      console.log(document.cookie);
+
+      console.log(getCookie('person'));
+    </script>
+  </body>
+</html>
