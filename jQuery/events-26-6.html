@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <button>click here</button>
+    <div class="box"></div>
+    <input type="text" name="" id="" placeholder="Enter your name" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(document).ready(() => {
+        console.log('Document ready');
+
+        $('button').click(() => {
+          console.log('Btn clicked');
+        });
+
+        $('button').dblclick(() => {
+          console.log('Btn double clicked');
+        });
+
+        $('.box').hover(() => {
+          console.log('Box hovered');
+        });
+
+        $('.box').mouseleave(() => {
+          console.log('Box mouse left');
+        });
+
+        $('.box').mouseup(() => {
+          console.log('Box mouse up');
+        });
+
+        $('input').change('click', () => {
+          console.log($('input').val());
+        });
+
+        $('input').on('click', () => {
+          console.log($('input').val());
+        });
+
+        $('input').focus(() => {
+          console.log('Input focused');
+        });
+      });
+    </script>
+  </body>
+</html>

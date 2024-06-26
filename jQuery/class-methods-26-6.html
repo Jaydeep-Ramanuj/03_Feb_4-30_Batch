@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 30px;
+      }
+      .box {
+        margin-top: 0 30px;
+        padding: 20px;
+        border: 3px solid;
+        border-radius: 8px;
+      }
+
+      .some {
+        background-color: lightgrey;
+      }
+      .red {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="add">Add class</button>
+    <button id="remove">Remove class</button>
+    <button id="toggle">Toggle class</button>
+    <button id="has">Has class</button>
+    <hr />
+    <div class="box some">
+      <p>This content is already in box</p>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let box = $('.box');
+
+      let addBtn = $('#add').click(() => {
+        box.addClass('red');
+      });
+      let removeBtn = $('#remove').click(() => box.removeClass('some'));
+
+      let toggleBtn = $('#toggle').click(() => {
+        box.toggleClass('red');
+      });
+
+      let hasBtn = $('#has').click(() => {
+        if (box.hasClass('some')) {
+          box.css('border-width', '10px');
+        }
+      });
+    </script>
+  </body>
+</html>

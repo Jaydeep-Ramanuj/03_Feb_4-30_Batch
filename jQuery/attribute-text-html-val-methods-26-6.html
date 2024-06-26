@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 30px;
+      }
+      .box {
+        margin-top: 0 30px;
+        padding: 20px;
+        border: 3px solid;
+        border-radius: 8px;
+      }
+
+      .some {
+        background-color: lightgrey;
+      }
+      .red {
+        background-color: tomato;
+      }
+
+      #inp {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="set-attr">Set Attribute value</button>
+    <button id="get-attr">get Attribute value</button>
+    <button id="remove-attr">Remove Attribute</button>
+
+    <hr />
+
+    <button id="set-innerText">Set InnerText</button>
+    <button id="get-innerText">get InnerText</button>
+
+    <hr />
+
+    <button id="set-innerHTML">Set InnerHTML</button>
+    <button id="get-innerHTML">get InnerHTML</button>
+
+    <hr />
+
+    <button id="set-value">Set value</button>
+    <button id="get-value">get value</button>
+
+    <hr />
+
+    <div class="box some" customAttr="something">
+      <p>This content is already in box</p>
+    </div>
+    <input
+      type="text"
+      name=""
+      id="inp"
+      value="default text"
+      placeholder="Enter your name"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let box = $('.box');
+      let inp = $('#inp');
+
+      let setAttrBtn = $('#set-attr').click(() => {
+        box.attr('id', 'else');
+      });
+
+      let getAttrBtn = $('#get-attr').click(() => {
+        box.text(box.attr('class'));
+      });
+
+      let removeAttrBtn = $('#remove-attr').click(() => {
+        box.removeAttr('customAttr');
+      });
+
+      let getInnerTextBtn = $('#get-innerText').click(() => {
+        console.log(box.text());
+      });
+
+      let setInnerTextBtn = $('#set-innerText').click(() => {
+        box.text('This text will be added');
+      });
+
+      let getInnerHTMLBtn = $('#get-innerHTML').click(() => {
+        console.log(box.html());
+      });
+
+      let setInnerHTMLBtn = $('#set-innerHTML').click(() => {
+        box.html('<i>This HTML will be added</i>');
+      });
+
+      let getValue = $('#get-value').click(() => {
+        console.log(inp.val());
+      });
+
+      let setValue = $('#set-value').click(() => {
+        inp.val('Jay');
+      });
+    </script>
+  </body>
+</html>

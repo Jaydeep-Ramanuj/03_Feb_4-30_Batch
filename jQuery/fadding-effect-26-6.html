@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 30px;
+      }
+      .box {
+        margin-top: 30px;
+        height: 300px;
+        width: 300px;
+        border-radius: 8px;
+        background-color: yellowgreen;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="fade-in">Fade-in</button>
+    <button id="fade-out">Fade-out</button>
+    <button id="fade-toggle">Fade-toggle</button>
+    <button id="fade-to">Fade-to</button>
+    <div class="box"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let box = $('.box');
+
+      let inBtn = $('#fade-in').click(() => {
+        box.fadeIn(600);
+      });
+      let outBtn = $('#fade-out').click(() => box.fadeOut(600));
+      let toggleBtn = $('#fade-toggle').click(() => {
+        box.fadeToggle(600);
+      });
+      let toBtn = $('#fade-to').click(() => {
+        box.fadeTo(600, 0.5);
+      });
+    </script>
+  </body>
+</html>
