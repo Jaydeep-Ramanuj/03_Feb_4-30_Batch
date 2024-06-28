@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Child 1</div>
+      <div class="child temp">Child 2 => Temp</div>
+      <div class="child" id="target">Child 3</div>
+      <div class="child">Child 4</div>
+      <div class="child temp">Child 5 => Temp</div>
+      <div class="child">Child 6</div>
+      <div class="child temp">Child 7 => Temp</div>
+      <div class="child temp">Child 8 => Temp</div>
+      <div class="child" id="end">Child 9</div>
+      <div class="child temp">Child 10 => Temp</div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+
+      console.log('First',$('.child').first())
+      
+      console.log('Last',$('.child').last());
+      
+      console.log('equal to given index number',$('.child').eq(3))
+      
+      console.log('Filter based on selector',$('.child').filter('.temp'));
+      
+      console.log('Not include based on selector',$('.child').not('.temp'))
+       
+    
+    </script>
+  </body>
+</html>

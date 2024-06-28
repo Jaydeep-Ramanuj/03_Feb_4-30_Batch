@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child" id="target">Child 3</div>
+      <div class="child">Child 4</div>
+      <div class="child">Child 5</div>
+      <div class="child">Child 6</div>
+      <div class="child">Child 7</div>
+      <div class="child">Child 8</div>
+      <div class="child" id="end">Child 9</div>
+      <div class="child">Child 10</div>
+
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let target = $('#target');
+      let end = $('#end');
+
+      console.log('Target all Siblings', target.siblings());
+      
+      console.log('Target next Sibling', target.next());
+      console.log('Target next all Siblings', target.nextAll());
+      console.log('Target next all Siblings Until', target.nextUntil('#end'));
+
+      console.log('End previous sibling', end.prev());
+      console.log('End All previous siblings', end.prevAll());
+      console.log('End All previous siblings Until', end.prevUntil('#target'));
+    </script>
+  </body>
+</html>
