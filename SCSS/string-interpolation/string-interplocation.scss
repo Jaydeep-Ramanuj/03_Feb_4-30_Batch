@@ -1,0 +1,14 @@
+@for $i from 1 through 10 {
+  .bg-red-#{$i * 100} {
+    @debug (100% - ($i * 10%));
+    background-color: scale-color(red, $lightness: (100% - ($i * 10%)));
+    // @error $i;
+  }
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  margin: 100px auto;
+}

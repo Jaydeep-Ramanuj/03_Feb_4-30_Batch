@@ -1,0 +1,10 @@
+.box {
+  width: 500px;
+  height: 300px;
+  color: rgba(205, 20, 205, 0.781);
+  color: hsl(0, 76%, 62%);
+  background-color: green;
+}
+.box::before {
+  content: "jay";
+}/*# sourceMappingURL=value-types.css.map */

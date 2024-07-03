@@ -1,0 +1,21 @@
+$box-width: 500px;
+$box-bg-color: yellowgreen;
+$box-padding: 30px;
+$box-border-radius: 12px;
+
+$inner-box-width: $box-width -100px;
+$inner-box-bg-color: scale-color($box-bg-color, $lightness: 50%);
+.box {
+  width: $box-width;
+  height: 300px;
+  background-color: $box-bg-color;
+  padding: $box-padding;
+
+  .inner-box {
+    width: $inner-box-width;
+    height: 200px;
+    background-color: $inner-box-bg-color;
+    border-radius: $box-border-radius / 2;
+    padding: $box-padding - 10px;
+  }
+}

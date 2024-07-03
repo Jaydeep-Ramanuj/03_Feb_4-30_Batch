@@ -1,0 +1,46 @@
+.bg-red-100 {
+  background-color: #ffe6e6;
+}
+
+.bg-red-200 {
+  background-color: #ffcccc;
+}
+
+.bg-red-300 {
+  background-color: #ffb3b3;
+}
+
+.bg-red-400 {
+  background-color: #ff9999;
+}
+
+.bg-red-500 {
+  background-color: #ff8080;
+}
+
+.bg-red-600 {
+  background-color: #ff6666;
+}
+
+.bg-red-700 {
+  background-color: #ff4d4d;
+}
+
+.bg-red-800 {
+  background-color: #ff3333;
+}
+
+.bg-red-900 {
+  background-color: #ff1a1a;
+}
+
+.bg-red-1000 {
+  background-color: red;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  margin: 100px auto;
+}/*# sourceMappingURL=string-interplocation.css.map */

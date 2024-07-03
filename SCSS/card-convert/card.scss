@@ -1,0 +1,77 @@
+// variables
+
+$text-color: whitesmoke;
+
+// mixin
+
+@mixin customPosition() {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+// Nesting
+
+.card-wrapper {
+  padding: 5px;
+  width: fit-content;
+  margin: 50px auto;
+
+  &:hover .card {
+    transform: perspective(800px) rotateY(180deg);
+  }
+  &:hover .card .front-face {
+    filter: blur(1px) brightness(40%);
+  }
+  &:hover .card .back-face {
+    backface-visibility: visible;
+  }
+
+  .card {
+    max-width: 300px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 600ms;
+
+    .front-face,
+    .back-face {
+      width: 100%;
+      border-radius: inherit;
+      transition: all 300ms;
+    }
+
+    .front-face {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
+    .back-face {
+      @include customPosition();
+      padding: 20px;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+
+      .title {
+        font-size: 1.4em;
+        color: $text-color;
+      }
+      .sub-title {
+        font-size: 1.1em;
+        color: $text-color;
+      }
+      .desc {
+        color: $text-color;
+      }
+    }
+  }
+}

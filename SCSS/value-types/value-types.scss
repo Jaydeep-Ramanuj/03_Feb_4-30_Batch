@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use 'sass:list';
+
+$width: 500px;
+$name: 'jay';
+$isMax: false;
+$bg-color: red;
+$colors: red, blue, pink, green;
+$border-radius: null;
+$colors-map: (
+  'bg-primary': 'rgba(205, 20, 205, 0.781)',
+  'bg-secondary': 'hsl(0, 76%, 62%)',
+  'bg-tertiary': '#5e5edaa7',
+);
+
+.box {
+  width: $width;
+  height: 300px;
+  color: rgba(205, 20, 205, 0.781);
+  color: unquote(map.get($colors-map, 'bg-secondary'));
+
+  @if ($isMax==true) {
+    background-color: list.nth($colors, 3);
+  } @else {
+    background-color: list.nth($colors, 4);
+  }
+
+  &::before {
+    content: $name;
+  }
+}

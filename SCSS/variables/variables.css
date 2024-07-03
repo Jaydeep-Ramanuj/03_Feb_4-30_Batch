@@ -1,0 +1,13 @@
+.box {
+  width: 500px;
+  height: 300px;
+  background-color: yellowgreen;
+  padding: 30px;
+}
+.box .inner-box {
+  width: 500px -100px;
+  height: 200px;
+  background-color: #cde699;
+  border-radius: 6px;
+  padding: 20px;
+}/*# sourceMappingURL=variables.css.map */
