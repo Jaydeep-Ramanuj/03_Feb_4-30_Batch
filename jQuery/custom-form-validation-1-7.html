@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .error-message {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form novalidate>
+      <div class="control-form">
+        <input
+          type="text"
+          name=""
+          placeholder="Enter your name"
+          id="name"
+          required
+          maxlength="12"
+          minlength="3"
+        />
+        <div class="error-message"></div>
+      </div>
+      <div class="control-form">
+        <input type="text" placeholder="Enter your Email" id="email" required />
+        <div class="error-message"></div>
+      </div>
+      <div class="control-form">
+        <input
+          type="password"
+          placeholder="Enter your Password"
+          id="pass"
+          required
+          minlength="3"
+          maxlength="16"
+        />
+        <div class="error-message"></div>
+      </div>
+
+      <button id="submit" onclick="return false">Submit</button>
+    </form>
+
+    <script>
+      let name = document.getElementById('name');
+      let email = document.getElementById('email');
+      let pass = document.getElementById('pass');
+      let submitBtn = document.getElementById('submit');
+
+      console.log(name);
+
+      submitBtn.addEventListener('click', () => {
+        if (!name.checkValidity()) {
+          name.nextElementSibling.style.display = 'block';
+          name.nextElementSibling.style.color = 'red';
+          name.nextElementSibling.innerText = 'Something went wrong';
+        }
+        if (!email.checkValidity()) {
+          email.nextElementSibling.style.display = 'block';
+          email.nextElementSibling.style.color = 'red';
+          email.nextElementSibling.innerText = 'Something went wrong';
+        }
+        if (!pass.checkValidity()) {
+          pass.nextElementSibling.style.display = 'block';
+          pass.nextElementSibling.style.color = 'red';
+          pass.nextElementSibling.innerText = 'Something went wrong';
+        }
+      });
+    </script>
+  </body>
+</html>

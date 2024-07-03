@@ -1,0 +1,1 @@
+This is some random text which you will get in ajax response.
