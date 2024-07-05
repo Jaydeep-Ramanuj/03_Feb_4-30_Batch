@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use 'sass:list';
+
+// List
+$colors: red, green, blue, yellow;
+
+// Map
+$border-type: (
+  solid: 3px solid black,
+  dashed: 3px dashed black,
+  dotted: 3px dotted black,
+  double: 3px double black,
+);
+
+// @debug $border-type;
+@debug $colors;
+
+$new-border-type-map: map.set($border-type, ridge, 3px ridge black);
+
+$new-colors-list: list.append($colors, pink);
+// @debug $new-border-type-map;
+@debug $new-colors-list;
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: list.nth($colors, 3);
+  border: map.get($border-type, 'dashed');
+}

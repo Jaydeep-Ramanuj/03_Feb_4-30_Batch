@@ -1,0 +1,22 @@
+@use 'sass:color';
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  margin: 50px auto;
+  background-color: blue;
+  $temp-color: white;
+  &:hover {
+    $temp-color: color.adjust(blue, $whiteness: 30%, $alpha: -0.3);
+
+    background-color: $temp-color;
+
+    @debug color.alpha($temp-color);
+  }
+  .inner-box {
+    height: 100px;
+    width: 100px;
+    background-color: darken($temp-color, 80%);
+  }
+}

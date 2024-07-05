@@ -1,0 +1,56 @@
+$width: 600px;
+
+$height: $width - 200px;
+
+$border-radius: 12px;
+$border-width: 3px;
+
+$isActive: true;
+$isFocused: true;
+
+// Arithmetic operator
+// +
+// -
+// *
+// / => math.div()
+// %
+
+// Relational Operators
+
+// <
+// <=
+// >
+// >=
+// !=
+// ==
+
+// Logical Operators
+
+// and
+// or
+// not
+
+.box {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius * 2;
+  border: $border-width + 2 solid black;
+  color: black;
+  &:hover {
+    width: $width / 2;
+  }
+
+  @if ($width < 500px) {
+    background-color: red;
+  } @else {
+    background-color: blue;
+  }
+
+  @if ($border-width == 3px) {
+    outline: 3px solid purple;
+  }
+
+  @if ($isActive and $isFocused) {
+    color: white;
+  }
+}

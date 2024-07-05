@@ -1,0 +1,24 @@
+li {
+  list-style-type: none;
+}
+li::before {
+  margin-right: 30px;
+}
+li:nth-child(1)::before {
+  content: 'Jaymit is a smart guy';
+}
+li:nth-child(2)::before {
+  content: Jaymit is a smart guy;
+}
+li:nth-child(3)::before {
+  content: 'some';
+}
+li:nth-child(4)::before {
+  content: 13;
+}
+li:nth-child(5)::before {
+  content: 'JAYMIT IS A SMART GUY';
+}
+li:nth-child(6)::before {
+  content: 'u99l39r';
+} /*# sourceMappingURL=string.css.map */

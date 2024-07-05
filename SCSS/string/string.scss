@@ -1,0 +1,30 @@
+@use 'sass:string';
+
+$name: 'Jaymit is a smart guy';
+
+li {
+  list-style-type: none;
+
+  &::before {
+    margin-right: 30px;
+  }
+  $temp: some;
+  &:nth-child(1)::before {
+    content: $name;
+  }
+  &:nth-child(2)::before {
+    content: unquote($name);
+  }
+  &:nth-child(3)::before {
+    content: quote($temp);
+  }
+  &:nth-child(4)::before {
+    content: string.index($name, 'smart');
+  }
+  &:nth-child(5)::before {
+    content: string.to-upper-case($name);
+  }
+  &:nth-child(6)::before {
+    content: quote(string.unique-id());
+  }
+}
