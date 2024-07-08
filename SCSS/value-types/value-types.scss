@@ -1,12 +1,19 @@
 @use 'sass:map';
 @use 'sass:list';
 
+// Number value
 $width: 500px;
+// String value
 $name: 'jay';
+// Boolean value
 $isMax: false;
+// Color value
 $bg-color: red;
+// List value
 $colors: red, blue, pink, green;
+// null value
 $border-radius: null;
+// Map value
 $colors-map: (
   'bg-primary': 'rgba(205, 20, 205, 0.781)',
   'bg-secondary': 'hsl(0, 76%, 62%)',

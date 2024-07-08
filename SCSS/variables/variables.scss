@@ -3,7 +3,7 @@ $box-bg-color: yellowgreen;
 $box-padding: 30px;
 $box-border-radius: 12px;
 
-$inner-box-width: $box-width -100px;
+$inner-box-width: $box-width - 100px;
 $inner-box-bg-color: scale-color($box-bg-color, $lightness: 50%);
 .box {
   width: $box-width;

@@ -18,7 +18,7 @@ $border-type: (
 $new-border-type-map: map.set($border-type, ridge, 3px ridge black);
 
 $new-colors-list: list.append($colors, pink);
-// @debug $new-border-type-map;
+@debug $new-border-type-map;
 @debug $new-colors-list;
 
 .box {

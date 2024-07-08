@@ -11,7 +11,6 @@
     $temp-color: color.adjust(blue, $whiteness: 30%, $alpha: -0.3);
 
     background-color: $temp-color;
-
     @debug color.alpha($temp-color);
   }
   .inner-box {
