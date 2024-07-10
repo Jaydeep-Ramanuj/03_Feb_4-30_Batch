@@ -1,0 +1,13 @@
+@use 'utils/variables';
+@use 'utils/colors';
+@use 'utils/effects';
+@use 'utils/mixins';
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: variables.$rounded-sm;
+  background-color: colors.$primary-bg-color;
+  @include effects.hover-effect();
+  @include mixins.customFlex();
+}

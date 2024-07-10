@@ -1,0 +1,56 @@
+// .h-5 {
+//   width: 5%;
+// }
+// .h-10 {
+//   width: 10%;
+// }
+// .h-15 {
+//   width: 15%;
+// }
+
+@for $i from 1 through 20 {
+  .h-#{$i * 5} {
+    height: $i * 5%;
+  }
+}
+@for $i from 1 through 20 {
+  .w-#{$i * 5} {
+    width: $i * 5%;
+  }
+}
+
+@for $i from 1 through 24 {
+  .bora-#{$i * 2} {
+    border-radius: $i * 2px;
+  }
+}
+
+$colors: red, blue, green, yellow, hotpink, teal;
+@each $color in $colors {
+  @for $i from 1 through 10 {
+    .bg-#{$color}-#{$i*100} {
+      //   @debug 100 - $i * 10;
+      background-color: scale-color($color, $lightness: (100% - $i * 10%));
+    }
+  }
+}
+
+$size: 'medium'; // small, medium, large
+
+.box {
+  @if ($size== 'small') {
+    height: 300px;
+  } @else if($size== 'medium') {
+    height: 500px;
+  } @else if($size== 'large') {
+    height: 600px;
+  } @else {
+    height: 10px;
+  }
+
+  //   background-color: yellowgreen;
+}
+
+.inner-box {
+  //   background-color: tomato;
+}

@@ -1,0 +1,21 @@
+@function calculateWidth($width) {
+  $result: $width - 200px;
+  @return $result;
+}
+
+@function colorBrighter($color, $amount) {
+  @return scale-color($color, $lightness: $amount);
+}
+
+.box {
+  width: 500px;
+  height: 300px;
+  background-color: yellowgreen;
+  border-radius: 12px;
+
+  .inner-box {
+    height: 200px;
+    width: calculateWidth(500px);
+    background-color: colorBrighter(tomato, 30%);
+  }
+}
