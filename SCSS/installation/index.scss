@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+$width: 500px;
+$border-radius: 12px;
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: $width;
+  height: math.div($width, 2);
+  border-radius: $border-radius;
+  background-color: tomato;
+  @include flex-center();
+  border: 2px solid red;
+}

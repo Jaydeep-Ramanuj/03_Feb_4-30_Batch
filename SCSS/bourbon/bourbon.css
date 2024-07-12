@@ -1,0 +1,43 @@
+.box {
+  height: 400px;
+  width: 300px;
+  margin: 50px auto;
+  border-radius: 12px;
+  margin: 50px auto;
+  border: 5px solid;
+  border-color: red green blue yellow;
+  border-style: solid dotted dashed ridge;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.box::before {
+  content: "";
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-color: red transparent transparent;
+  border-width: 2rem 1rem 0;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  bottom: 100%;
+  left: 50%;
+}
+.box .inner-box {
+  height: 100px;
+  width: 100px;
+  background-color: #b34532;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  bottom: 100px;
+  left: 100px;
+}
+.box [type=color], .box [type=date], .box [type=datetime], .box [type=datetime-local], .box [type=email], .box [type=month], .box [type=number], .box [type=password], .box [type=search], .box [type=tel], .box [type=text], .box [type=time], .box [type=url], .box [type=week], .box input:not([type]), .box textarea {
+  border: 3px solid red;
+}
+
+/*# sourceMappingURL=bourbon.css.map */

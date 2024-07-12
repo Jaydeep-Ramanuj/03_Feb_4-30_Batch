@@ -1,0 +1,12 @@
+.box {
+  width: 500px;
+  height: 250px;
+  border-radius: 12px;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}
+
+/*# sourceMappingURL=index.css.map */

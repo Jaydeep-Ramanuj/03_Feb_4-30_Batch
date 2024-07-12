@@ -1,0 +1,33 @@
+@import 'bourbon/core/bourbon';
+
+.box {
+  //   height: 300px;
+  //   width: 300px;
+
+  @include size(300px, 400px);
+  margin: 50px auto;
+  border-radius: 12px;
+  margin: 50px auto;
+  border: 5px solid;
+
+  @include border-color(red green blue yellow);
+  @include border-style(solid dotted dashed ridge);
+
+  @include position(relative, 0);
+
+  &::before {
+    content: '';
+    @include triangle('down', 2rem, 2rem, red);
+    @include position(absolute, 100% 50%);
+  }
+
+  .inner-box {
+    @include size(100px);
+    background-color: shade(tomato, 30%);
+    @include position(absolute, 100px 100px);
+  }
+
+  #{$all-text-inputs} {
+    border: 3px solid red;
+  }
+}
