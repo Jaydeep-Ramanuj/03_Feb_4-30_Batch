@@ -1,0 +1,17 @@
+@box-width: 500px;
+@box-height:@box-width - 200px;
+@box-bg-color: #ff6347;
+
+.box {
+  width: @box-width;
+  height: @box-height;
+  background-color: @box-bg-color;
+
+  .inner-box {
+    width: @box-height - 100px;
+    height: @box-height - 100px;
+    // background-color: red;
+    // background-color: saturate(@box-bg-color, -50%);
+    background-color: spin(lighten(@box-bg-color, 20%), 10);
+  }
+}

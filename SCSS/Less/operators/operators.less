@@ -1,0 +1,15 @@
+@box-width: 700px;
+@box-border-radius: 12px;
+@isBoxEffect: false;
+
+.box {
+  width: @box-width*2;
+  height: @box-width + 100px;
+  border-radius: @box-border-radius - 2px;
+
+  background-color: if(@isBoxEffect = true, green, red);
+
+  border-width: if(@box-width <= 500px, 3px, 10px);
+  border-color: black;
+  border-style: solid;
+}
