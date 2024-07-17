@@ -1,0 +1,24 @@
+.colors() {
+  b: blue;
+  r: red;
+  p: purple;
+  o: orange;
+  p: pink;
+}
+
+.borderTypes() {
+  solid: solid;
+  dashed: dashed;
+  dotted: dotted;
+  double: double;
+  chirag: ridge;
+}
+
+@border-widths:1px, 3px, 8px, 12px, 15px;
+
+li {
+  list-style-type: none;
+  width: 200px;
+  height: 50px;
+  border: extract(@border-widths, 5) .borderTypes() [chirag] .colors() [r];
+}
